@@ -16,20 +16,14 @@ export class YandexOCRCredentialsApi implements ICredentialType {
 		// Properties can be defined exactly in the same way
 		// as node properties.
 		{
-			displayName: 'User Name',
-			name: 'username',
-			type: 'string',
-			default: '',
-		},
-		{
-			displayName: 'Password',
-			name: 'password',
+			displayName: 'Service API key',
+			name: 'service-api-key',
 			type: 'string',
 			typeOptions: {
 				password: true,
 			},
 			default: '',
-		},
+		}
 	];
 
 	// This credential is currently not used by any node directly
