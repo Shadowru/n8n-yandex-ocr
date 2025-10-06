@@ -5,11 +5,11 @@ import {
 	INodeProperties,
 } from 'n8n-workflow';
 
-export class ExampleCredentialsApi implements ICredentialType {
-	name = 'exampleCredentialsApi';
-	displayName = 'Example Credentials API';
+export class YandexOCRCredentialsApi implements ICredentialType {
+	name = 'yandex-OCR-Credentials-Api';
+	displayName = 'Yandex OCR Credentials API';
 
-	documentationUrl = 'https://your-docs-url';
+	documentationUrl = 'https://---';
 
 	properties: INodeProperties[] = [
 		// The credentials to get from user and save encrypted.

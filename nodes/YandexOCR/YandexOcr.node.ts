@@ -6,15 +6,15 @@ import type {
 } from 'n8n-workflow';
 import { NodeConnectionType, NodeOperationError } from 'n8n-workflow';
 
-export class ExampleNode implements INodeType {
+export class YandexOCR implements INodeType {
 	description: INodeTypeDescription = {
-		displayName: 'Example Node',
-		name: 'exampleNode',
+		displayName: 'Yandex OCR',
+		name: 'yandexOcr',
 		group: ['transform'],
 		version: 1,
-		description: 'Basic Example Node',
+		description: 'Send document to Yandex OCR',
 		defaults: {
-			name: 'Example Node',
+			name: 'Yandex OCR',
 		},
 		inputs: [NodeConnectionType.Main],
 		outputs: [NodeConnectionType.Main],
@@ -23,13 +23,21 @@ export class ExampleNode implements INodeType {
 			// Node properties which the user gets displayed and
 			// can change on the node.
 			{
-				displayName: 'My String',
-				name: 'myString',
+				displayName: 'OCR Model',
+				name: 'model',
 				type: 'string',
 				default: '',
-				placeholder: 'Placeholder value',
-				description: 'The description text',
+				placeholder: '',
+				description: 'Model to use for text detection',
 			},
+			{
+				displayName: 'Language Codes',
+				name: 'languageCodes',
+				type: 'string',
+				default: 'ru',
+				placeholder: 'ru',
+				description: 'ISO 639-1',
+			}
 		],
 	};
 
